@@ -6,7 +6,7 @@
  + To view on GitHub Pages:
    * Click on the link in the About section.
 ## Link to Live Site
- [ QuotesCentral](https://github.com/JoyWambui/quotesIP)
+ [ QuotesCentral](https://joywambui.github.io/quotesIP/)
 ## License
  Project licensed under [MIT License](https://github.com/JoyWambui/quotesIP/blob/master/LICENSE)
 
