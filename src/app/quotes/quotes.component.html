@@ -6,7 +6,7 @@
           <h5 class="card-title" >"{{quote.name}}"</h5>
           <p class="card-text">~{{quote.author}}</p>
           <p (click)='toggleDetails(i)'><i class="arrow"></i></p> 
-          <app-quote-details *ngIf='quote.showDescription' [quote]='quote'></app-quote-details>
+          <app-quote-details *ngIf='quote.showDescription' [quote]='quote' (deleteQuote) = 'deletesQuote($event,i)'></app-quote-details>
         </div>
       </div>
     </div>
