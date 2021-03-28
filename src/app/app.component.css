@@ -1,3 +1,9 @@
+.app{
+  background-image: url(https://lkb.com.np/wp-content/uploads/2020/07/plumage-176723_1920.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  }
 .header{
   padding: 40px;
   margin: 10px;
