@@ -1,10 +1,14 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlightQuote]'
-})
+  selector: '[appHighlightQuote]'})
 export class HighlightQuoteDirective {
 
-  constructor() { }
-
+  constructor(private elem: ElementRef) {}
+  @HostListener('highestVotes()') onHighestVotes() {
+    this.highlight('yellow');
+  }
+  private highlight(color: string) {
+    this.elem.nativeElement.style.backgroundColor = color;
+  }
 }
