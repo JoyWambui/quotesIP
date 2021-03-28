@@ -13,6 +13,17 @@ export class QuoteDetailsComponent implements OnInit {
   quoteDelete(complete:boolean){
     this.deleteQuote.emit(complete);
   }
+  @Output() voteCount = new EventEmitter<number>();
+
+  upVotesCount(){
+    this.voteCount.emit(this.quote.upVote,);
+      this.quote.upVote +=1
+  }
+  downVotesCount(){
+    this.voteCount.emit(this.quote.downVote,); 
+      return this.quote.downVote +=1
+  }
+
 
 
   constructor() { }

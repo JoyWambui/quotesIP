@@ -1,1 +1,12 @@
-
+.names{
+  text-align: left;
+}
+.vote{
+  font-size: 30px;
+}
+#yes{
+  color: #64d420;
+}
+#no{
+  color: #d62b0d;
+}

@@ -1,4 +1,11 @@
 <div class="row">
+  <div class="col-md-6 vote">
+    <p (click)= 'upVotesCount()'><i class='far fa-smile' id="yes"></i> {{quote.upVote}}</p>  
+  </div>
+  <div class="col-md-6 vote">
+    <p (click)= 'downVotesCount()'><i class='far fa-frown ' id="no"></i> {{quote.downVote}}</p> 
+  </div>
+</div><br>
 <div class="row">
   <div class="col-md-12 names">
     <p>Submitted by: {{quote.submitter}}</p>
