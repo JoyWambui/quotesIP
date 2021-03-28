@@ -15,6 +15,10 @@ export class QuotesComponent implements OnInit {
     new Quote(5,'I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.','Maya Angelou','Samantha',0,0, new Date()),
     new Quote(6,'Talk is cheap. Show me the code.','Linus Torvalds','Cartman',0,0, new Date()),
   ];
+  toggleDetails(index: number){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
 
   constructor() { }
 

@@ -5,7 +5,8 @@
         <div class="card-body">
           <h5 class="card-title" >"{{quote.name}}"</h5>
           <p class="card-text">~{{quote.author}}</p>
-          <app-quote-details ></app-quote-details>
+          <p (click)='toggleDetails(i)'><i class="arrow"></i></p> 
+          <app-quote-details *ngIf='quote.showDescription' [quote]='quote'></app-quote-details>
         </div>
       </div>
     </div>
