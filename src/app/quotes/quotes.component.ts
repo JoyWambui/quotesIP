@@ -29,6 +29,17 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(quote)
   }
 
+  upVotes(index: number){
+    let votes = this.quotes.map(a=> a.upVote);
+    let largest:number = 0;
+    for(index= 0 ; index< votes.length; index++){
+      largest = 0;
+      largest= votes[0];
+      largest = Math.max(votes[index]);
+    }
+    return largest;
+  }
+
 
 
 

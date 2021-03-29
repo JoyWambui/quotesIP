@@ -5,7 +5,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class HighlightQuoteDirective {
 
   constructor(private elem: ElementRef) {}
-  @HostListener('highestVotes()') onHighestVotes() {
+  @HostListener('upVotes') onUpVotes() {
     this.highlight('yellow');
   }
   private highlight(color: string) {
