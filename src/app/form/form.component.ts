@@ -11,7 +11,9 @@ export class FormComponent implements OnInit {
   newQuote = new Quote(0,"","","",0,0, new Date());
   @Output() addedQuote = new EventEmitter<Quote>();
   addQuote(){
-    this.addedQuote.emit(this.newQuote);
+    this.addedQuote.emit(this.newQuote); 
+    this.newQuote = new Quote(0,"","","",0,0, new Date());
+
   }
 
   constructor() { }
