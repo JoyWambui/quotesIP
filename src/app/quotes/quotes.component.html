@@ -1,9 +1,10 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4" *ngFor= 'let quote of quotes; let i=index'>
-      <div appHighlightQuote class="card text-center">
+      <div  class="card text-center">
         <div class="card-body quoteCard">
-          <h5 class="card-title" >"{{quote.name}}"</h5>
+          <h5 appHighlightQuote *ngIf="upVotes(addHighlight)===quote.upVote && quote.upVote>0" class="card-title" >"{{quote.name}}"</h5>
+          <h5 *ngIf="upVotes(addHighlight)!==quote.upVote || quote.upVote===0" class="card-title" >"{{quote.name}}"</h5>
           <p class="card-text">~{{quote.author}}</p>
           <p (click)='toggleDetails(i)'><i class="arrow"></i></p> 
           <app-quote-details *ngIf='quote.showDescription' [quote]='quote' (deleteQuote) = 'deletesQuote($event,i)'></app-quote-details>
